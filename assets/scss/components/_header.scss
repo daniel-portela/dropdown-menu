@@ -1,174 +1,174 @@
 .header {
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   background-color: var(--black-color);
-   box-shadow: 0 2px 16px hsla(220, 32%, 8%, .3);
-   z-index: var(--z-fixed);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--black-color);
+  box-shadow: 0 2px 16px hsla(220, 32%, 8%, 0.3);
+  z-index: var(--z-fixed);
 }
 
 .nav {
-   height: var(--header-height);
+  height: var(--header-height);
 
-   &__logo,
-   &__burger,
-   &__close {
-      color: var(--white-color);
-   }
+  &__logo,
+  &__burger,
+  &__close {
+    color: var(--white-color);
+  }
 
-   &__data {
-      height: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-   }
+  &__data {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-   &__logo {
-      display: inline-flex;
-      align-items: center;
-      column-gap: .25rem;
-      font-weight: var(--font-semi-bold);
+  &__logo {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.25rem;
+    font-weight: var(--font-semi-bold);
 
-      & i {
-         font-weight: initial;
-         font-size: 1.25rem;
-      }
-   }
-
-   &__toggle {
-      position: relative;
-      width: 32px;
-      height: 32px;
-   }
-
-   &__burger,
-   &__close {
-      position: absolute;
-      width: max-content;
-      height: max-content;
-      inset: 0;
-      margin: auto;
+    & i {
+      font-weight: initial;
       font-size: 1.25rem;
-      cursor: pointer;
-      transition: opacity .1s, transform .4s;
-   }
+    }
+  }
 
-   &__close {
+  &__toggle {
+    position: relative;
+    width: 32px;
+    height: 32px;
+  }
+
+  &__burger,
+  &__close {
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    inset: 0;
+    margin: auto;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: opacity 0.1s, transform 0.4s;
+  }
+
+  &__close {
+    opacity: 0;
+  }
+
+  @media screen and (max-width: 1118px) {
+    &__menu {
+      position: absolute;
+      left: 0;
+      top: 2.5rem;
+      width: 100%;
+      height: calc(100vh - 3.5rem);
+      overflow: auto;
+      pointer-events: none;
       opacity: 0;
-   }
+      transition: top 0.4s, opacity 0.3s;
 
-   @media screen and (max-width: 1118px) {
-      &__menu {
-         position: absolute;
-         left: 0;
-         top: 2.5rem;
-         width: 100%;
-         height: calc(100vh - 3.5rem);
-         overflow: auto;
-         pointer-events: none;
-         opacity: 0;
-         transition: top .4s, opacity .3s;
-
-         &::-webkit-scrollbar {
-            width: 0;
-         }
+      &::-webkit-scrollbar {
+        width: 0;
       }
+    }
 
-      &__list {
-         background-color: var(--black-color);
-         padding-top: 1rem;
-      }
-   }
-
-   &__link {
-      color: var(--white-color);
+    &__list {
       background-color: var(--black-color);
-      font-weight: var(--font-semi-bold);
-      padding: 1.25rem 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transition: background-color .3s;
+      padding-top: 1rem;
+    }
+  }
 
-      &:hover {
-         background-color: var(--black-color-light);
-      }
-   }
+  &__link {
+    color: var(--white-color);
+    background-color: var(--black-color);
+    font-weight: var(--font-semi-bold);
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: var(--black-color-light);
+    }
+  }
 }
 
 .show-menu {
-   opacity: 1;
-   top: 3.5rem;
-   pointer-events: initial;
+  opacity: 1;
+  top: 3.5rem;
+  pointer-events: initial;
 }
 
 .show-icon .nav__burger {
-   opacity: 0;
-   transform: rotate(90deg);
+  opacity: 0;
+  transform: rotate(90deg);
 }
 
 .show-icon .nav__close {
-   opacity: 1;
-   transform: rotate(90deg);
+  opacity: 1;
+  transform: rotate(90deg);
 }
 
 .dropdown {
-   &__item {
-      cursor: pointer;
-   }
+  &__item {
+    cursor: pointer;
+  }
 
-   &__arrow {
+  &__arrow {
+    font-size: 1.25rem;
+    font-weight: initial;
+    transition: transform 0.4s;
+  }
+
+  &__link,
+  &__sublink {
+    padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+    color: var(--white-color);
+    background-color: var(--black-color-light);
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    font-weight: var(--font-semi-bold);
+    transition: background-color 0.3s;
+
+    & i {
       font-size: 1.25rem;
       font-weight: initial;
-      transition: transform .4s;
-   }
+    }
 
-   &__link,
-   &__sublink {
-      padding: 1.25rem 1.25rem 1.25rem 2.5rem;
-      color: var(--white-color);
-      background-color: var(--black-color-light);
-      display: flex;
-      align-items: center;
-      column-gap: .5rem;
-      font-weight: var(--font-semi-bold);
-      transition: background-color .3s;
+    &:hover {
+      background-color: var(--black-color);
+    }
+  }
 
-      & i {
-         font-size: 1.25rem;
-         font-weight: initial;
-      }
+  &__menu,
+  &__submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+  }
 
-      &:hover {
-         background-color: var(--black-color);
-      }
-   }
+  &__item:hover &__menu,
+  &__subitem:hover > &__submenu {
+    max-height: 1000px;
+    transition: max-height 0.4s ease-in;
+  }
 
-   &__menu,
-   &__submenu {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height .4s ease-out;
-   }
-
-   &__item:hover &__menu,
-   &__subitem:hover>&__submenu {
-      max-height: 1000px;
-      transition: max-height .4s ease-in;
-   }
-
-   &__item:hover &__arrow {
-      transform: rotate(180deg);
-   }
+  &__item:hover &__arrow {
+    transform: rotate(180deg);
+  }
 }
 
 .dropdown {
-   &__add {
-      margin-left: auto;
-   }
+  &__add {
+    margin-left: auto;
+  }
 
-   &__sublink {
-      background-color: var(--black-color-lighten);
-   }
+  &__sublink {
+    background-color: var(--black-color-lighten);
+  }
 }

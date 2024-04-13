@@ -1,23 +1,22 @@
 :root {
-   --header-height: 3.5rem;
+  --header-height: 3.5rem;
 
-   --black-color: hsl(220, 100%, 31%);
-   --black-color-light: hsl(220, 100%, 31%);
-   --black-color-lighten: hsl(220, 100%, 40%);
-   --white-color: #fff;
-   --body-color: hsl(220, 100%, 97%);
+  --black-color: hsl(220, 100%, 31%);
+  --black-color-light: hsl(220, 100%, 31%);
+  --black-color-lighten: hsl(220, 100%, 40%);
+  --white-color: #fff;
+  --body-color: hsl(220, 100%, 97%);
 
-   --body-font: 'open sans', sans-serif;
-   --normal-font-size: .938rem;
+  --body-font: "open sans", sans-serif;
+  --normal-font-size: 0.938rem;
 
+  @media screen and (min-width: 1024px) {
+    --normal-font-size: 1rem;
+  }
 
-   @media screen and (min-width: 1024px) {
-      --normal-font-size: 1rem;
-   }
+  --font-regular: 400;
+  --font-semi-bold: 600;
 
-   --font-regular: 400;
-   --font-semi-bold: 600;
-
-   --z-tooltip: 10;
-   --z-fixed: 100;
+  --z-tooltip: 10;
+  --z-fixed: 100;
 }

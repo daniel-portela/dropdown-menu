@@ -20,7 +20,8 @@ Projeto - <a href="https://dropdown-menu-responsive.netlify.app/">Menú suspenso
 - Contém uma barra de navegação responsiva.
 - Contém menu suspenso e um submenu.
 - Desenvolvido primeiro com a metodologia Mobile First, depois para desktop.
-- Compatível com todos os dispositivos móveis.<br><br>
+- Compatível com todos os dispositivos móveis.
+  <br><br>
 
 🔒 <b>Licença</b>
 
@@ -30,4 +31,4 @@ Este projeto está sob [LICENSE](LICENSE), o que significa que você não tem pe
 
 Se você tiver alguma dúvida, sugestão ou interesse em colaborar, não hesite em me contatar.
 
-Email: <a href="mailto:danielportela.ti@gmail.com"> danielportela.ti@gmail.com</a> 
+Email: <a href="mailto:danielportela.ti@gmail.com"> danielportela.ti@gmail.com</a>
